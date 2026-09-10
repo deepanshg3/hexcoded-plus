@@ -2,9 +2,6 @@
 
 A product prototype exploring an AI-powered post-processing layer for HexCoded Creative Studio.
 
-**Live Prototype:** [Open Demo](YOUR_RENDER_URL)  
-**GitHub Repository:** [hexcoded-plus](YOUR_GITHUB_REPO_URL)
-
 ## What I Built
 
 The idea is to extend the existing generation workflow from:
