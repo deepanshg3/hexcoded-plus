@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HexCoded — Creative Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="rail">
+    <div class="rail-logo">H</div>
+    <nav class="rail-nav">
+      <div class="rail-item">⌂</div>
+      <div class="rail-item">▢</div>
+      <div class="rail-item">▥</div>
+      <div class="rail-item">✧</div>
+      <div class="rail-item">♧</div>
+      <div class="rail-item">↗</div>
+      <div class="rail-item">⌁</div>
+      <div class="rail-item active">✦</div>
+    </nav>
+    <div class="rail-settings">⚙</div>
+  </aside>
+
+  <header class="topbar">
+    <div class="project-name">Untitled project</div>
+    <div class="more">•••</div>
+    <div class="top-actions">
+      <div class="credits">◆ 93 credits · Low</div>
+      <div class="theme">☼</div>
+      <div class="avatar">T</div>
+      <div class="trial"><b>BRAND</b><span>Trial</span></div>
+    </div>
+  </header>
+
+  <main class="app">
+    <section class="builder">
+      <div class="eyebrow">MAKE A VIDEO</div>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div><div class="step-title">Product</div><div class="step-sub">Add a product link</div></div>
+        <div class="chevron">›</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div><div class="step-title">Format</div><div class="step-sub">Pick a format</div></div>
+        <div class="chevron">›</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div><div class="step-title">Actor</div><div class="step-sub">Director decides</div></div>
+        <div class="chevron">›</div>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><span>LENGTH</span><b>15s</b></div>
+        <div class="slider"><i></i></div>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><span>RESOLUTION</span><em>9:16</em></div>
+        <div class="resolution">
+          <div class="selected">480p</div><div>720p</div><div>1080p</div>
+        </div>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><span>SCRIPT LANGUAGE</span></div>
+        <div class="language"><span>◎&nbsp; English</span><span>EN⌄</span></div>
+      </div>
+
+      <div class="url-button">Add a URL to start →</div>
+    </section>
+
+    <section class="gallery">
+      <h1>Your videos</h1>
+      <p class="sub">All your takes for this project. Start a new one anytime.</p>
+
+      <div class="cards">
+        <article class="video-card" data-id="1">
+          <div class="card-media"><img src="generated-output/1.jpeg" alt="Generated creative 1"></div>
+          <div class="card-meta"><span>Generated creative 1</span><span>9:16&nbsp; · &nbsp;AI</span></div>
+        </article>
+        <article class="video-card" data-id="2">
+          <div class="card-media"><img src="generated-output/2.jpg" alt="Generated creative 2"></div>
+          <div class="card-meta"><span>Generated creative 2</span><span>9:16&nbsp; · &nbsp;AI</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="backdrop" id="backdrop"></div>
+
+  <section class="modal" id="modal" aria-hidden="true">
+    <div class="modal-header"><span>Video</span><button id="close">×</button></div>
+    <div class="modal-body">
+      <div class="preview-frame">
+        <img id="modalImage" src="" alt="Generated creative preview">
+      </div>
+
+      <div class="script-box">
+        <div class="script-title"><span>SCRIPT</span><span>▣ COPY</span></div>
+        <div class="script-text">/excited<br>Let's warm up!<br><br>/playful<br>Brrrrr!</div>
+        <div class="scrollbar"></div>
+      </div>
+
+      <div class="pills">
+        <span>Language: en</span><span>Aspect: 9:16</span><span>Length: 5s</span><span>Created: Today</span>
+      </div>
+
+      <div class="post-label">AI POST-PROCESSING</div>
+      <div class="processing-actions">
+        <button class="process-btn" data-op="upscale">✦ &nbsp;AI Upscale</button>
+        <button class="process-btn" data-op="color">◉ &nbsp;Color Correction</button>
+      </div>
+
+      <div class="processing" id="processing">
+        <div class="spinner"></div>
+        <div><b id="processingTitle">Enhancing your creative</b><span id="processingSubtitle">Applying AI Upscale...</span></div>
+      </div>
+
+      <div class="result" id="result">
+        <div class="result-title" id="resultTitle"></div>
+        <div class="compare">
+          <div><div class="compare-label">ORIGINAL</div><div class="compare-box"><img id="originalResult"></div></div>
+          <div><div class="compare-label">ENHANCED</div><div class="compare-box"><img id="enhancedResult"></div></div>
+        </div>
+      </div>
+
+      <div class="detail-result" id="detailResult">
+        <div class="result-title">DETAIL · 2.5×</div>
+        <div class="compare">
+          <div><div class="compare-label">ORIGINAL</div><div class="detail-box" id="detailOriginal"></div></div>
+          <div><div class="compare-label">ENHANCED</div><div class="detail-box detail-enhanced" id="detailEnhanced"></div></div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <div>↻ &nbsp; Recreate</div>
+        <div>⇩ &nbsp; Download</div>
+        <div>△ &nbsp; Reject</div>
+        <div class="approve">✓ &nbsp; Approve</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
